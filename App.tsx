@@ -5,7 +5,9 @@ import Ripple from './components/Ripple';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Ripple style={styles.ripple}>
+      <Ripple style={styles.ripple} onTap={() => {
+        console.log('Tapping');
+      }}>
         <Text style={{ fontSize: 25 }}>Tap</Text>
       </Ripple>
     </View>
@@ -25,6 +27,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: 'white',
+    borderRadius: 20,
     //* IOS
     shadowOpacity: 0.2,
     shadowOffset: { width: 0, height: 0 },
